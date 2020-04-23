@@ -1,0 +1,49 @@
+<div *ngFor="let ann of allSavingGoal" class="col-lg-6 col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-8">
+                    <h5 class="card-title" [routerLink]="['/editContact', ann.id]">
+                        {{ann.fullName}}
+                    </h5>
+                    <h6>
+                        {{ann.phone}}  ||   {{ann.phonetype}}  ||  {{ann.address}}  ||
+
+                    </h6>
+                </div>
+                <div class="col-2">
+
+                </div>
+
+                <div class="col-2">
+                    <button id="imgBtn" (click)="toggleDelete(ann.id)"
+                        onclick="document.getElementById('id01').style.display='block'" type="button"
+                        class="btn btn-info btn-just-icon">
+                        <i class="fa fa-trash" id='danger' aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="id01" class="modal">
+    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+    <form class="modal-content">
+        <div class="container">
+            <h1>Delete Contact ?</h1>
+            <p>Are you sure you want to delete your contact?</p>
+
+            <div class="clearfix">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="btn btn-primary" (click)="toggle()">Cancel</button>
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                    class="btn btn-danger blacktone" (click)="deleteDocument()">Delete</button>
+            </div>
+            <br>
+
+        </div>
+    </form>
+</div>
+
+<button type="button" class="btn btn-danger" (click)="AddContact()">Add Contact</button>

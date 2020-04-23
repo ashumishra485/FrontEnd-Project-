@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-2 backIcon">
+            <i class="fas fa-arrow-left" (click)="navOutgoing()"></i>
+        </div>
+        <div class="col-8 heading">
+            <h2 style="font-weight: bold; margin: auto !important;">Add Contact</h2>
+        </div>
+        <div class="col-2">
+            <!-- Expty Column to align the content proportionally-->
+        </div>
+    </div>
+    <div class="card card-3">
+        <div class="card-heading"></div>
+        <div class="card-body">
+            <!-- <h2 class="title">Annual Bill</h2> -->
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+                <div class="form-group">
+                    <label class="lbl">First Name</label>
+                    <input class="form-control" type="text" placeholder="Enter Here" name="name"
+                        formControlName="firstName" />
+                </div>
+
+                <div class="form-group">
+                    <label class="lbl">Last Name</label>
+                    <input class="form-control" type="text" placeholder="Enter Here" name="name"
+                        formControlName="lastName" />
+                </div>
+
+                <div class="form-group">
+                    <label class="lbl">Address</label>
+                    <input class="form-control" type="text" placeholder="Enter Here" name="name"
+                        formControlName="address" />
+                </div>
+
+                <div class="form-group">
+                    <label class="lbl">Email</label>
+                    <input class="form-control" type="email" placeholder="Enter Here" name="name"
+                        formControlName="email" />
+                </div>
+
+                <div class="form-group">
+                    <label class="lbl">Contact Number</label>
+                    <input class="form-control" type="tel" placeholder="Enter Here" name="name"
+                        formControlName="phone" />
+                </div>
+
+                <div class="form-group">
+                    <label class="lbl">Contact Type</label>
+                    <input class="form-control" type="text" placeholder="Enter Here" name="name"
+                        formControlName="phonetype" />
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="p-t-10">
+                    <button class="btn btn-primary" [disabled]="!contactForm.valid" type="submit">
+                        Save
+                    </button>
+                </div>
+            </form>
+            <br />
+            <button class="btn btn-outline-success btn-round" id="calcelBtn" (click)="navBack()" type="submit">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
