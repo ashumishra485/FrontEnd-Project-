@@ -1,19 +1,18 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
     integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
-<div class="container-fluid">
+<div class="container-fluid" style=" height: 100vh;
+background-image: linear-gradient(to right, #000000, #0f0c0e, #181518, #1e1c21, #24242a, #272a31, #293038, #2b373f, #2b3d44, #2b4348, #2c484b, #2f4e4c);
+">
 
     <div class="row">
-        <div class="col-2 backIcon">
-            <i class="fas fa-arrow-left" (click)="navOutgoing()"></i>
-        </div>
-        <div class="col-8 heading">
+
+        <div class="col-8 heading lbl">
             <h2 style="font-weight: bold; margin: auto !important;">Add Contact</h2>
         </div>
-        <div class="col-2">
-            <!-- Expty Column to align the content proportionally-->
-        </div>
+
     </div>
-    <div class="card card-3">
+    <div class="card card-3"
+        style="background-image: radial-gradient(circle, #0e1616, #151d1e, #1b2326, #222a2e, #2a3136, #2d363d, #313c44, #34414b, #304751, #2b4d55, #265357, #255956);">
         <div class="card-heading"></div>
         <div class="card-body">
             <!-- <h2 class="title">Annual Bill</h2> -->
@@ -55,23 +54,19 @@
                 </div>
 
 
-
-
-
-
-
-
-
                 <div class="p-t-10">
-                    <button class="btn btn-primary" [disabled]="!contactForm.valid" type="submit">
+                    <button class="btn btn-outline-success btn-round" style="font-size: large; font-weight: bold;"
+                        [disabled]="!contactForm.valid" type="submit">
                         Save
+                    </button>
+                    <button class="btn btn-outline-success btn-round" style="font-size: large; font-weight: bold; float: right;"
+                        (click)="navBack()" type="submit">
+                        Cancel
                     </button>
                 </div>
             </form>
             <br />
-            <button class="btn btn-outline-success btn-round" id="calcelBtn" (click)="navBack()" type="submit">
-                Cancel
-            </button>
+
         </div>
     </div>
 </div>

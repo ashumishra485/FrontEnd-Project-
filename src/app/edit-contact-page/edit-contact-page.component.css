@@ -1,0 +1,8 @@
+.back1{
+  background-image: linear-gradient(to right, #000000, #0f0c0e, #181518, #1e1c21, #24242a, #272a31, #293038, #2b373f, #2b3d44, #2b4348, #2c484b, #2f4e4c);
+}
+.lbl{
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}

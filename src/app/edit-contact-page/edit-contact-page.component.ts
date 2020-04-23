@@ -58,7 +58,9 @@ export class EditContactPageComponent implements OnInit {
       );
   }
   get f() { return this.editcontactForm.controls; }
-
+  navBack(){
+    this.router.navigateByUrl('contactlist');
+  }
   async onSubmit() {
 
     let formData: any = new FormData();

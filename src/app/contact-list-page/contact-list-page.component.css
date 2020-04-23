@@ -1,4 +1,15 @@
-
+.textColor{
+  color: white;
+}
+.gradPatch{
+color: white;
+font-weight: bold;
+}
+.headClass{
+  margin-top: 0 !important; 
+color: white;
+font-weight: bold;
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
